@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { DebugMode } from "./Screens/DebugMode";
 
 const MyView = () => {
   return (
@@ -19,8 +20,8 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="Home" component={MyView} />
-        <Tab.Screen name="Settings" component={MyView} />
-        <Tab.Screen name="Debug" component={MyView} />
+        <Tab.Screen name="Books" component={MyView} />
+        <Tab.Screen name="Debug" component={DebugMode} />
       </Tab.Navigator>
     </NavigationContainer>
   );
